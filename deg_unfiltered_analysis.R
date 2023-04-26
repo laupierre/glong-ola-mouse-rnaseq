@@ -43,6 +43,7 @@ pheno <- pheno[idx, ]
 
 stopifnot (colnames (a) == pheno$sample)
 
+
 ## Loop through the 3 ages
 
 age <- c(3, 6, 15)
