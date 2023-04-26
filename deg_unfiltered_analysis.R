@@ -75,7 +75,7 @@ write.xlsx (res, paste (paste ("GLONG_vs_OLA_2023_" , age[i], sep=""), "_months.
 
 
 ## heatmap plot
-# Th, DDC, NR4A2, SLC6A3, Hmgn2, Pafah1b2, Srp54A
+# Th, DDC, NR4A2, SLC6A3, SNCA, Hmgn2, Pafah1b2, Srp54A, NUDC-PS1
 select <- c("ENSMUSG00000000214.12", "ENSMUSG00000020182.17", "ENSMUSG00000026826.14", "ENSMUSG00000021609.7", "ENSMUSG00000025889.14", "ENSMUSG00000003038.16", "ENSMUSG00000003131.8", "ENSMUSG00000073079.7", "ENSMUSG00000110331.2")
 
 df <- as.data.frame(colData(dds)[,c("genotype","sample")])
