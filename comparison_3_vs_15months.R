@@ -12,7 +12,7 @@ mco <- mco [order (mco$`padj-3months-2022`), ]
 colnames (mco)[colnames (mco) == "Geneid-3months-2022"] <- "Geneid"
 mco$stats <- ifelse (mco$`padj-3months-2022` < 0.05 & mco$`padj-15months-2022` < 0.05, "Yes","No")
 mco$trend <- ifelse (mco$`log2FoldChange-3months-2022` < 0 & mco$`log2FoldChange-15months-2022` < 0, "Down","No")
-mco$trend <- ifelse (mco$`log2FoldChange-3months-2022` > 0 & mco$`log2FoldChange-15months-2022` > 0, "Up")
+mco$trend [mco$`log2FoldChange-3months-2022` > 0 & mco$`log2FoldChange-15months-2022` > 0] <- "Up"
 write.xlsx (mco, "Comparison of GLONG vs OLA at 3 and 15 months.xlsx", rowNames=F)
 
 
