@@ -48,7 +48,6 @@ age <- 15
 
 pheno.s <- pheno[pheno$age == age, ]
 
-# select samples GLONG21SN, GLONG22SN, GLONG23SN, OLA16SN, OLA17SN, OLA18SN 
 pheno.s <- pheno[pheno$sample %in% c("GLONG21SN", "GLONG22SN", "OLA16SN", "OLA17SN"), ]
 
 a.s <- a[ ,colnames (a) %in% pheno.s$sample]
