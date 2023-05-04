@@ -74,7 +74,7 @@ res <- res[order (res$padj), ]
 res[res$gene_name == "Snca", ] 
 res[res$gene_name == "Th", ] 
 
-write.xlsx (res, paste (paste ("OLA_vs_GLONG_2023_selected_mice_" , age, sep=""), "_months.xlsx", sep=""), rowNames=F)
+write.xlsx (res, paste (paste ("GLONG_vs_OLA_2023_selected_mice_" , age, sep=""), "_months.xlsx", sep=""), rowNames=F)
 
 
 ## heatmap plot
