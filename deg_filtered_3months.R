@@ -57,6 +57,7 @@ stopifnot (colnames (a.s) == pheno.s$sample)
 
 dds <- DESeqDataSetFromMatrix(countData = round (a.s), colData = pheno.s, design = ~ genotype)
 
+# Three vs three samples
 keep <- rowSums(counts(dds) >= 10) >= 3
 dds <- dds[keep,]
 dds
